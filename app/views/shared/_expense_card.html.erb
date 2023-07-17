@@ -1,0 +1,15 @@
+<%= link_to expense_path(expense), id: "expense-card-#{expense.id}" do %>
+<div class="d-flex justify-content-between my-5 card-group">
+    <div class="text-center w-25 fs-1">
+    $
+    <%= expense.amount %>
+    </div>
+    <div class="text-start">
+        <h4><%=expense.name%></h4>
+        <span><%= expense.created_at.strftime('%e %B %Y') %></span>
+    </div>
+    <span class="text-center w-25 me-3">
+    <%= expense.added_group %> Category
+    <span>
+</div>
+<% end %>

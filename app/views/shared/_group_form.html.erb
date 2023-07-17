@@ -1,0 +1,18 @@
+<%= form_with(model: @group, url: url, method: method, class: 'w-sm-100 mx-auto') do |f| %>
+  <div class="form-group mb-3">
+    <%= f.label :name, "Category Name", class: "form-label" %>
+    <%= f.text_field :name, class: "form-control form-control-sm" %>
+    <%= render "shared/form_error", errors: f.object.errors, field: :name %>
+  </div>
+  <div class="form-group mb-3">
+    <%= f.label :icon, "Select Category Icon", class: "form-label" %>
+    <%= f.select :icon,
+                 @group_options.map { |option| [image_tag(option.last), option.first] },
+                 prompt: "Select an option",
+                 class: "form-select" %>
+    <%= render "shared/form_error", errors: f.object.errors, field: :icon %>
+  </div>
+  <div class="actions">
+    <%= f.submit label, class: "btn log" %>
+  </div>
+<% end %>

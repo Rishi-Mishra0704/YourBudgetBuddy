@@ -1,0 +1,45 @@
+<div
+  class="modal fade"
+  id="add"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= title %></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+
+        <% if data.empty? %>
+          <h5 class="text-info">You don't have any update Expense yet or All already added</h5>
+        <% else %>
+          <% data.each do |item| %>
+            <div class="d-flex justify-content-between mb-2">
+              <h4><%= item.name %></h4>
+              <%= button_to "Add",
+              add_expense_group_path(params: @group.id, format: item.id),
+              method: :post,
+              class: "button-class btn mx-5",
+              disable_with: "Processing...",
+              id: item.name %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <% if data.empty? %>
+          <%= link_to "Add one", new_expense_path, class: "btn add" %>
+        <% end %>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
