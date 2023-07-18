@@ -1,8 +1,15 @@
-<div class="splash">
-    <h1>Your Budget Buddy</h1>
+<div class="splash container">
+    <h1 class="fs-1 m-4">Your Budget Buddy</h1>
 
-    <div class = "log-in-container">
-        <%= link_to "Log in", new_user_session_path, class: "button-splash btn log" %>
-        <%= link_to "Sign in", new_user_registration_path, class: "button-splash btn" %>
+    <div class="splash-text">
+        <p class="lead fs-3">Manage your finances with ease</p>
+        <p class="lead fs-3">Track your spending</p>
+        <p class="lead fs-3">Set goals</p>
+        <p class="lead fs-3 mb-5">Save money</p>
+    </div>
+
+    <div class="log-in-container">
+        <%= link_to "Log in", new_user_session_path, class: "button-splash btn btn-primary log" %>
+        <%= link_to "Sign in", new_user_registration_path, class: "button-splash btn btn-primary log" %>
     </div>
 </div>
