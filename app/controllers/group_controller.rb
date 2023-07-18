@@ -16,7 +16,6 @@ class GroupController < ApplicationController
     @group = Group.new
     @group_options = Group.pluck(:name, :icon)
   end
-  
 
   def create
     @group = Group.new(
