@@ -12,9 +12,9 @@ class Group < ApplicationRecord
   # methods
 
   def add_unique_expense(expense)
-    expenses << expense unless expenses.include?(expense)
+    self.expenses << expense unless self.expenses.exists?(expense.id)
   end
-
+  
   def group_expense
     total = 0
     expenses.each do |expense|
