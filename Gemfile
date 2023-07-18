@@ -70,8 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "rspec-rails"
-   gem 'shoulda-matchers', '~> 5.0'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'rails-controller-testing'
 end
 
 gem "devise"
 gem 'erb-formatter', '~> 0.4.3'
+gem 'factory_bot_rails', '~> 6.2'
+gem 'faker', '~> 2.18'
