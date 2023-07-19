@@ -154,7 +154,7 @@ Please give a ⭐️ if you like this project
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for this opportunity that they gave us to build this amazing project.
+I would like to thank Gregoire Vella for his amazing design which was the inspiration for this project.Please check out his work at https://www.behance.net/gregoirevella
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
