@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between w-sm-100 mx-auto">
+    <h1 class="text-center">Add Expense</h1>
+
+    <%= link_to "Back", :back, class: "btn btn-secondary", type: "button" %>
+  </div>
+
+  <%= render "shared/expense_form",
+  expense: @expense,
+  url: expense_index_path,
+  method: :post,
+  label: "Add Expense" %>
+</div>

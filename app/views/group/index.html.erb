@@ -1,0 +1,5 @@
+<% @groups.each do |group| %>
+    <%= render "shared/group_card", group:group %>
+<% end %>
+
+<%= render "shared/add_button", label: "Add Category", path: new_group_path  %>

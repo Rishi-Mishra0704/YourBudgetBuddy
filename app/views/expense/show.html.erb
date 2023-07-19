@@ -1,0 +1,31 @@
+<div class="d-flex align-items-center justify-content-between m-4 ">
+  <%= link_to "Back", expense_index_path, class: "btn btn-secondary", type: "button" %>
+  <button class="btn add" data-bs-toggle="modal" data-bs-target="#add">
+    Add Group
+  </button>
+  <%= render "shared/modal_group",
+  data: @groups,
+  title: "Add Category for the Expense" %>
+</div>
+<%= render "shared/expense_card", expense: @expense %>
+<table class="table mx-auto p-lg-5 table-striped bg-light p-2 table-hover">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Total</th>
+      <th scope="col">created at</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @expense_groups.each_with_index do |group, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= group.name %></td>
+        <td><%= group.group_expense %></td>
+        <td><%= group.created_at.strftime("%e %B %Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
