@@ -70,7 +70,7 @@ It is built primarily with Ruby on Rails and PostgreSQL.It is a web application 
 </ul>
 
 <h1>🚀 Live Demo</h1>
-<a href="">Live Demo</a>
+<a href="https://budgetbuddy-vtim.onrender.com">Live Demo</a>
 <h1>Video presentation</h1>
 <a href="https://www.loom.com/share/30bd1df0948e42288034708b25227b77">Click here</a>
 
